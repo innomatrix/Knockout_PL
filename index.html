@@ -1,0 +1,79 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Knockout_PL(sciagawki)</title>
+    <meta name="description" content="Knockout_PL">
+    <meta name="author" content="Retalin2019">
+
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+</head>
+
+<body>
+    <div class="tab">
+        <button id="defaultOpen" class="tablinks 1" onclick="openTab(event, '1')">1</button>
+        <button class="tablinks 2" onclick="openTab(event, '2')">2</button>
+        <button class="tablinks 3" onclick="openTab(event, '3')">3</button>
+
+        <!-- <button class="tablinks 4" onclick="openTab(event, '4')">4</button> -->
+
+        <!-- <button class="tablinks x" onclick="openTab(event, 'x')">x</button> -->
+    </div>
+
+    <!-- Tab content -->
+    <div id="1" class="tabcontent">
+        <p><img src="./stronyJPG/strona_1.png"/></p>
+    </div>
+
+    <div id="2" class="tabcontent">
+        <p><img src="./stronyJPG/strona_1.png" /></p>
+    </div>
+
+    <div id="3" class="tabcontent">
+        <p><img src="./stronyJPG/strona_1.png" /></p>
+    </div>
+
+    <!--
+    <div id="4" class="tabcontent">
+        <p><img src="./stronyJPG/strona_1.png" /></p>
+    </div>
+    -->
+
+    <!-- End Tab content -->
+
+    <script src="js/jquery-3.4.1.slim.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="js/mousetrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // open default 1st Tab
+            $("#defaultOpen").click();
+
+            // combinations
+            Mousetrap.bind('alt+q', function (e) {
+                openTab(e, '1');
+                return false;
+            });   
+            Mousetrap.bind('alt+w', function (e) {
+                openTab(e, '2');
+                return false;
+            });  
+            Mousetrap.bind('alt+e', function (e) {
+                openTab(e, '3');
+                return false;
+            });     
+            // Mousetrap.bind('alt+r', function (e) {
+            //     openTab(e, '4');
+            //     return false;
+            // });                                 
+        });
+     
+    </script>
+</body>
+
+</html>
